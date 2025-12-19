@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AXION Design System - Deep Indigo + Cyan Accent */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* AXION Light Theme - Clean & Professional */
+    --background: 220 20% 97%;
+    --foreground: 224 71% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 10%;
+
+    /* Deep Indigo Primary */
+    --primary: 234 89% 54%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Soft Gray Secondary */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 224 71% 10%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    /* Cyan Accent */
+    --accent: 187 85% 43%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 234 89% 54%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 224 71% 10%;
+    --sidebar-primary: 234 89% 54%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 224 71% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 234 89% 54%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(234 89% 54%), hsl(234 89% 44%));
+    --gradient-accent: linear-gradient(135deg, hsl(187 85% 43%), hsl(187 85% 33%));
+    --gradient-hero: linear-gradient(135deg, hsl(234 89% 54%) 0%, hsl(187 85% 43%) 100%);
+  }
+
+  .dark {
+    /* AXION Dark Theme - Deep & Immersive */
+    --background: 224 71% 4%;
+    --foreground: 210 40% 98%;
+
+    --card: 224 71% 7%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 224 71% 7%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Bright Indigo Primary for Dark Mode */
+    --primary: 234 89% 64%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 224 71% 12%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 224 71% 12%;
+    --muted-foreground: 215 20% 65%;
+
+    /* Cyan Accent (brighter for dark) */
+    --accent: 187 85% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --success: 142 76% 46%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 60%;
+    --warning-foreground: 0 0% 0%;
+
+    --border: 224 71% 15%;
+    --input: 224 71% 15%;
+    --ring: 234 89% 64%;
+
+    /* Sidebar Dark */
+    --sidebar-background: 224 71% 6%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 234 89% 64%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 224 71% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 224 71% 15%;
+    --sidebar-ring: 234 89% 64%;
+
+    /* Dark Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(234 89% 64%), hsl(234 89% 54%));
+    --gradient-accent: linear-gradient(135deg, hsl(187 85% 53%), hsl(187 85% 43%));
+    --gradient-hero: linear-gradient(135deg, hsl(234 89% 64%) 0%, hsl(187 85% 53%) 100%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .glass {
+    @apply bg-card/80 backdrop-blur-lg border border-border/50;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background: var(--gradient-hero);
+  }
+}
